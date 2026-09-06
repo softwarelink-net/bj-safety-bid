@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap');
+@import 'leaflet/dist/leaflet.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --safety-blue: #1e40af;
+  --banner-h: 40px;
+  font-family: 'Noto Sans SC', system-ui, sans-serif;
+  color: #0f172a;
+  background: #f1f5f9;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding-top: 40px;
+}
+
+@layer components {
+  .panel {
+    @apply rounded-xl border border-slate-200/80 bg-white/95 shadow-panel backdrop-blur;
+  }
+  .btn-primary {
+    @apply rounded-lg bg-gradient-to-r from-blue-700 to-sky-600 px-4 py-2 text-sm font-semibold text-white shadow hover:from-blue-600 hover:to-sky-500 disabled:opacity-60;
+  }
+  .btn-ghost {
+    @apply rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-slate-600 hover:bg-slate-50;
+  }
+  .badge {
+    @apply inline-flex items-center rounded-md px-2 py-0.5 text-xs font-medium ring-1 ring-inset;
+  }
+}

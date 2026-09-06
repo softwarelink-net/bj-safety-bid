@@ -1,0 +1,29 @@
+# 本仓仅用于 R2 上传鉴权与本站资源绑定参考。
+# 共享入口 Worker 名为 allworld；日常发布请用 `npm run deploy`（只写本站 R2 前缀），
+# 切勿随意 `wrangler deploy` 覆盖共享 Worker，以免影响其他站点。
+name = "allworld"
+main = "worker/index.ts"
+compatibility_date = "2026-09-04"
+compatibility_flags = ["nodejs_compat"]
+account_id = "57df712874237f41c6142eb723be3f21"
+workers_dev = true
+
+[[r2_buckets]]
+binding = "STORAGE"
+bucket_name = "bj-safety-bid-assets"
+
+[[r2_buckets]]
+binding = "SITES"
+bucket_name = "allworld-sites"
+
+[vars]
+APP_NAME = "安全生产监管综合信息平台（二期）"
+PROJECT_SLUG = "bj-safety-bid"
+REPO_NAME = "bj-safety-bid"
+SITE_SLUG = "bj-safety-bid"
+DEPLOYMENT_HOST = "https://bj-safety-bid.softwarelink.net/"
+HOST_DOMAIN = "https://bj-safety-bid.softwarelink.net"
+ROOT_DOMAIN = "softwarelink.net"
+SITE_HOST = "https://bj-safety-bid.softwarelink.net/"
+TABLE_PREFIX = "bsb_"
+R2_SITE_PREFIX = "allworld-sites/bj-safety-bid/"
